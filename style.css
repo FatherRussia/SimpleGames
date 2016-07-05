@@ -1,0 +1,126 @@
+body {
+    user-select: none;
+    background: url(background.png);
+    background-size: cover;
+}
+
+#nextButton {
+    background-color: rgba(67,160,71,0.71);
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -150px;
+    border-radius: 7px;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.64);
+    transition: .3s;
+    outline: none;
+    overflow: hidden;
+}
+
+#nextButton:hover {
+    background-color: #43A047;
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,0.61);
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#buttonText {
+    position: relative;
+    margin-left: 16%;
+    font-size: 65px;
+    margin-top: 11%;
+    color: #fff;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
+Ripple Effect CSS, courtesy of http://thecodeplayer.com/walkthrough/ripple-click-effect-google-material-design */
+.ink {
+    display: block;
+    position: absolute;
+    background: #118016;
+    border-radius: 100%;
+    transform: scale(0);
+}
+
+/* Animation Effect */
+.ink.animate {
+    animation: ripple .65s linear;
+}
+
+@keyframes ripple {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The Overlay (background) */
+.overlay {
+/* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 0;
+    width: 100%;
+    position: fixed;
+/* Stay in place */
+    z-index: 1;
+/* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: #000;
+/* Black fallback color */
+    background-color: rgba(0,0,0,0.98);
+/* Black w/opacity */
+    overflow-y: hidden;
+/* Disable horizontal scroll */
+    transition: .5s;
+/* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* The content inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    margin-top: 270px;
+    display: inline-block;
+}
+
+/* Customize text inside overlay */
+.overlay a:hover,.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay h1 {
+    color: #818181;
+    margin-bottom: 20px;
+    margin-top: 65px;
+    cursor: pointer;
+}
+
+.overlay p {
+    color: rgba(129,124,124,0.82);
+    font-size: 20px;
+}
